@@ -3,3 +3,11 @@ spring:
     name: reactive-design-patterns
 server:
   port: 8081
+
+management:
+  endpoint:
+    health:
+      show-details: always # or 'when-authorized'
+  health:
+    defaults:
+      enabled: true # Enable default health indicators

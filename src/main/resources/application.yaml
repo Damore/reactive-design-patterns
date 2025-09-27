@@ -5,6 +5,7 @@ server:
   port: 8081
 
 
+
 management:
   endpoint:
     health:
@@ -27,4 +28,3 @@ resilience4j:
         eventConsumerBufferSize: 10
         record-exceptions:
           - java.lang.Throwable
-

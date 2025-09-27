@@ -1,10 +1,10 @@
-package br.com.gabriel.reactivedesignpatters.controller;
+package br.com.gabriel.reactivedesignpatterns.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import br.com.gabriel.reactivedesignpatters.record.User;
-import br.com.gabriel.reactivedesignpatters.service.UserService;
+import br.com.gabriel.reactivedesignpatterns.record.User;
+import br.com.gabriel.reactivedesignpatterns.service.UserService;
 import reactor.core.publisher.Mono;
 
 @RestController

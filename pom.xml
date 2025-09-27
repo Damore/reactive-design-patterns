@@ -10,10 +10,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>br.com.gabriel</groupId>
-    <artifactId>reactive-design-patters</artifactId>
+    <artifactId>reactive-design-patterns</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>reactive-design-patters</name>
-    <description>reactive-design-patters</description>
+    <name>reactive-design-patterns</name>
+    <description>reactive-design-patterns</description>
     <url/>
     <licenses>
         <license/>

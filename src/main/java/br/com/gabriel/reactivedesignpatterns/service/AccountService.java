@@ -1,10 +1,9 @@
-package br.com.gabriel.reactivedesignpatters.service;
+package br.com.gabriel.reactivedesignpatterns.service;
 
 import java.util.UUID;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
-import br.com.gabriel.reactivedesignpatters.record.AccountInformation;
-import br.com.gabriel.reactivedesignpatters.record.User;
+import br.com.gabriel.reactivedesignpatterns.record.AccountInformation;
 import reactor.core.publisher.Mono;
 
 @Service

@@ -1,10 +1,10 @@
-package br.com.gabriel.reactivedesignpatters;
+package br.com.gabriel.reactivedesignpatterns;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ReactiveDesignPattersApplicationTests {
+class ReactiveDesignPatternsApplicationTests {
 
     @Test
     void contextLoads() {

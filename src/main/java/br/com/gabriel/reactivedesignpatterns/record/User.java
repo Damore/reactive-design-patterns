@@ -1,4 +1,4 @@
-package br.com.gabriel.reactivedesignpatters.record;
+package br.com.gabriel.reactivedesignpatterns.record;
 
 import java.math.BigDecimal;
 import java.util.UUID;

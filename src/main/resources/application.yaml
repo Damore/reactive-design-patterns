@@ -4,6 +4,7 @@ spring:
 server:
   port: 8081
 
+
 management:
   endpoint:
     health:
@@ -11,3 +12,19 @@ management:
   health:
     defaults:
       enabled: true # Enable default health indicators
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      account-api:
+        sliding-window-type: COUNT_BASED # or TIME_BASED
+        slidingWindowSize: 4 # number of calls
+        failureRateThreshold: 50 # percentage
+        minimumNumberOfCalls: 2 # how many calls to evaluate the failure rate (threshold)
+        registerHealthIndicator: true # to expose the health endpoint (/actuator/health) (actuator/health/circuitbreakers/account-api)
+        waitDurationInOpenState: 10s # how long to stay open. During this time all calls will fail fast
+        permittedNumberOfCallsInHalfOpenState: 2 # number of calls when in half-open state
+        eventConsumerBufferSize: 10
+        record-exceptions:
+          - java.lang.Throwable
+

@@ -4,10 +4,32 @@ spring:
 server:
   port: 8081
 
+
+
 management:
   endpoint:
     health:
       show-details: always # or 'when-authorized'
+  endpoints:
+    web:
+      exposure:
+        include: health, circuitbreakers
   health:
     defaults:
       enabled: true # Enable default health indicators
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      account-api:
+        sliding-window-type: COUNT_BASED # or TIME_BASED
+        slidingWindowSize: 4 # number of calls
+        failureRateThreshold: 50 # percentage
+        minimumNumberOfCalls: 2 # how many calls to evaluate the failure rate (threshold)
+        registerHealthIndicator: true # to expose the health endpoint (/actuator/health)
+        waitDurationInOpenState: 20s # how long to stay open. During this time all calls will fail fast
+        permittedNumberOfCallsInHalfOpenState: 2 # number of calls when in half-open state
+        eventConsumerBufferSize: 10
+        record-exceptions: # Those exceptions will be recorded as a failure for the metric to evaluate the failure rate
+          - org.springframework.web.reactive.function.client.WebClientRequestException # network errors or api out of reach
+          - org.springframework.web.reactive.function.client.WebClientResponseException # 4xx and 5xx http status codes from the api

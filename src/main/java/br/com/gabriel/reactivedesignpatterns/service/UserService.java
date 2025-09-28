@@ -1,6 +1,7 @@
 package br.com.gabriel.reactivedesignpatterns.service;
 
 import java.util.UUID;
+import br.com.gabriel.reactivedesignpatterns.circuitbreaker.service.AccountService;
 import br.com.gabriel.reactivedesignpatterns.record.User;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;

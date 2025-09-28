@@ -1,4 +1,4 @@
-package br.com.gabriel.reactivedesignpatterns.controller;
+package br.com.gabriel.reactivedesignpatterns.circuitbreaker.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

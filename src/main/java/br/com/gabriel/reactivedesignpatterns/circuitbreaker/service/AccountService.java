@@ -1,4 +1,4 @@
-package br.com.gabriel.reactivedesignpatterns.service;
+package br.com.gabriel.reactivedesignpatterns.circuitbreaker.service;
 
 import java.util.UUID;
 import org.springframework.stereotype.Service;

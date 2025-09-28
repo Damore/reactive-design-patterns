@@ -26,8 +26,9 @@ resilience4j:
         minimumNumberOfCalls: 2 # how many calls to evaluate the failure rate (threshold)
         registerHealthIndicator: true # to expose the health endpoint (/actuator/health)
         waitDurationInOpenState: 20s # how long to stay open. During this time all calls will fail fast
+        automaticTransitionFromOpenToHalfOpenEnabled: true # after waitDurationInOpenState, transition to half-open
         permittedNumberOfCallsInHalfOpenState: 2 # number of calls when in half-open state
-        eventConsumerBufferSize: 10
+        eventConsumerBufferSize: 10 # size of the event buffer
         record-exceptions: # Those exceptions will be recorded as a failure for the metric to evaluate the failure rate
           - org.springframework.web.reactive.function.client.WebClientRequestException # network errors or api out of reach
           - org.springframework.web.reactive.function.client.WebClientResponseException # 4xx and 5xx http status codes from the api

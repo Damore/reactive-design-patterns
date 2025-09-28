@@ -12,7 +12,7 @@ The patterns showcased in this repository are designed to address common challen
 
 ## Use Case: Account API
 
-All patterns are tested against a sample `account-api`, which simulates typical banking operations such as:
+All patterns are tested against a sample [account-api](https://github.com/Damore/account-api), which simulates typical banking operations such as:
 
 - Searching for branches
 - Retrieving account balances
